@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=The+Nautigal:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lexend&family=The+Nautigal:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo::before {
+  content: "";
+  background: linear-gradient(315deg, #00ccff, #d400d4, #c3a29f);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  transition: 0.5s;
+  position: relative;
+  animation: animate 1s linear infinite forwards;
+}
+.line {
+  height: 1px;
+  width: 80%;
+  margin-left: 45px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .logo::before {
+    width: 66px;
+    height: 66px;
+  }
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+}
+.art {
+  grid-area: art;
+}
+.slider {
+  grid-area: slider;
+  height: min-content;
+  display: block;
+}
+.cont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas: "art art art art art art . slider slider slider";
+}
+.category {
+  border-left-color: #00ccff;
+  border-right-color: #d400d4;
+  border-right-color: #d400d4;
+  border-left-color: #00ccff;
+  
+}
+@media only screen and (max-width: 1023px) {
+  .cont {
+    grid-template-areas: "art art art art art . slider slider slider slider";
+  }
+  .slider {
+    height: 29%;
+    height: min-content;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .slider {
+    margin-top: 30px;
+    height: min-content;
+  }
+}
+.c-share {
+  padding: 1rem;
+  display: flex;
+  flex: column;
+  align-items: center;
+  justify-content: center; 
+}
