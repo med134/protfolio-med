@@ -38,7 +38,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>MedCode|About Page</title>
+        <title>MedCode|About Pages</title>
         <meta
           name="description"
           content="Learn more about MedCode, a frontend developer with a passion for 
